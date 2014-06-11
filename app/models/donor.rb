@@ -4,8 +4,8 @@ class Donor
            @name = name
      end
  
-    def donate article, amount, duedate	       
-           return Donation.new article, amount, duedate 
+    def donate lot
+           return Donation.new lot
     end
     
 end

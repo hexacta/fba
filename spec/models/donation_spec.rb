@@ -1,20 +1,17 @@
 require_relative '../../app/models/donation'
-require 'date'
-
+require_relative '../../app/models/lot'
 
 describe Donation do
-	it "When the duedate is after than now, the donation expired" do
-		amount = 10
-		due_date = Date.today + 1
-		donation = Donation.new "article", amount, due_date
-		donation.is_expired.should be_true
+	it "is valid when its lot is not expired" do
+		lot_mock = mock(Lot)
+		lot_mock.stub!(:is_expired).and_return(false)
+		Donation.new lot_mock
 	end
 
-	it "When the duedate is before than now, the donation  not expired" do
-		amount = 10
-		due_date = Date.today - 1
-		donation = Donation.new "article", amount, due_date
-		donation.is_expired.should be_false
+	it "is invalid when its lot is expired" do
+		lot_mock = mock(Lot)
+		lot_mock.stub!(:is_expired).and_return(true)
+		expect{Donation.new lot_mock}.to raise_error(RuntimeError)
 	end
 
 end

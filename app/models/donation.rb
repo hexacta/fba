@@ -1,13 +1,12 @@
 class Donation
    	
-   	def initialize article, amount, due_date
-           @article = article
-           @amount = amount
-           @due_date = due_date
-     end
+   	def initialize lot
+   		if lot.is_expired
+   			raise "cannot create a donation with a expired lot"
+   		else	
+        	@lot = lot
+        end
+    end
 
-     def is_expired
-     	@due_date > Date.today
-     end	
     
 end
