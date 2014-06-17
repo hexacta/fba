@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Fba::Application.config.secret_key_base = '740793c709d6028ab5717c745db835cfeff9dc7d21208f837b5293a8bd259f1ef4183d456d84a484d5f029551ddd1f5be90c84149b1e1f8c8f824fa06319fef1'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+Fba::Application.config.secret_key_base = secure_token

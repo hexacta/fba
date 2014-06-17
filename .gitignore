@@ -17,6 +17,7 @@
 
 # Ignore gs directory
 .gs
+.secret
 
 # Ignore vim backup files
 *~
