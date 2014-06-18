@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ApplicationHelper do
+  before { set_locale }
 
   describe "full_title" do
     it "should include the page title" do

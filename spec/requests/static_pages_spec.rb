@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Static pages" do
-
+  before (:all) { set_locale }
   subject { page }
 
   shared_examples_for "all static pages" do
@@ -10,7 +10,7 @@ describe "Static pages" do
   end
 
   describe "Home page" do
-    let(:heading) { 'Fundacion Banco de Alimentos' }
+    let(:heading) { I18n.t(:heading) }
     let(:page_title) { '' }
     
     before { visit root_path }
