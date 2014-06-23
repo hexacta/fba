@@ -5,13 +5,13 @@ describe "Static pages" do
   subject { page }
 
   shared_examples_for "all static pages" do
-    it { should have_selector('h1', text: heading) }
     it { should have_title(full_title(page_title)) }
+    it { should have_selector('h1', text: heading) }
   end
 
   describe "Home page" do
-    let(:heading) { I18n.t(:heading) }
     let(:page_title) { '' }
+    let(:heading) { I18n.t(:heading) }
     
     before { visit root_path }
 
