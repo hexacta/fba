@@ -3,3 +3,28 @@ en:
   heading: "FoodBank Foundation"
   new_user_title: "New User"
   new_user_heading: "New User"
+  create_user: "Create User"
+  submit_error: "The form contains errors:"
+  name: "Name"
+  email: "Email"
+  password: "Password"
+  confirmation: "Confirmation"
+  welcome: "Welcome to the FoodBank Foundation"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "can't be blank"
+            email:
+              blank: "can't be blank"
+              invalid: "must be a valid email"
+            password:
+              blank: "can't be blank"
+              too_short: "is too short"
+  attributes:
+    name: "Name"
+    email: "Email"
+    password: "Password"
+    confirmation: "Confirmation"

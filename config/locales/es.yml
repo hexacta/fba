@@ -3,3 +3,28 @@ es:
   heading: "Fundacion Banco de Alimentos"
   new_user_title: "Nuevo Usuario"
   new_user_heading: "Nuevo Usuario"
+  create_user: "Crear Usuario"
+  submit_error: "El formulario tiene errores:"
+  name: "Nombre"
+  email: "Email"
+  password: "Contraseña"
+  confirmation: "Confirmacion"
+  welcome: "Bienvenidos a la Fundacion Banco de Alimentos"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name: 
+              blank: "no puede estar vacio"
+            email: 
+              blank: "no puede estar vacio"
+              invalid: "debe ser un email valido"
+            password: 
+              blank: "no puede estar vacia"
+              too_short: "es demasiado corta"
+  attributes:
+    name: "Nombre"
+    email: "Email"
+    password: "Contraseña"
+    confirmation: "Confirmacion"
