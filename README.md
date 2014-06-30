@@ -14,3 +14,7 @@ El problema principal se soluciona respondiendo la siguiente pregunta: ¿Cómo l
 
 Adicionalmente, con su crecimiento, necesitan un sistema de gestion de stock para ser mas eficientes en la gestión de su mercaderia.
 
+
+Nuestro objetivo
+===
+Queremos crear un sistema web que permita a los bancos de alimentos del mundo, de forma gratuita, gestionar el stock y los pedidos de los comedores.
