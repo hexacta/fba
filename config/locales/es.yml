@@ -28,3 +28,7 @@ es:
     email: "Email"
     password: "Contraseña"
     confirmation: "Confirmacion"
+  username_label: "Nombre Usuario"
+  password_label: "Contraseña"
+  sign_in_button_name: "Iniciar sesion"
+
