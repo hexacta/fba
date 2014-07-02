@@ -1,6 +1,7 @@
 es:
   title: "FBA"
   heading: "Fundacion Banco de Alimentos"
+  home: "Home"
   new_user_title: "Nuevo Usuario"
   new_user_heading: "Nuevo Usuario"
   create_user: "Crear Usuario"
@@ -28,7 +29,7 @@ es:
     email: "Email"
     password: "Contraseña"
     confirmation: "Confirmacion"
-  username_label: "Nombre Usuario"
-  password_label: "Contraseña"
-  sign_in_button_name: "Iniciar sesion"
-
+  username: "Usuario"
+  signin: "Iniciar Sesion"
+  signout: "Cerrar Sesion"
+  invalid_signin: "Combinacion invalida de email/contraseña"

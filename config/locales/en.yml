@@ -1,6 +1,7 @@
 en:
   title: "FBF"
   heading: "FoodBank Foundation"
+  home: "Home"
   new_user_title: "New User"
   new_user_heading: "New User"
   create_user: "Create User"
@@ -28,7 +29,7 @@ en:
     email: "Email"
     password: "Password"
     confirmation: "Confirmation"
-  username_label: "Username"
-  password_label: "Password"
-  sign_in_button_name: "Sign in"
-
+  username: "Username"
+  signin: "Sign In"
+  signout: "Sign Out"
+  invalid_signin: "Invalid email/password combination"

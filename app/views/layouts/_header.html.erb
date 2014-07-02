@@ -4,7 +4,12 @@
       <%= link_to t(:title), root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to t(:signin), signin_path %></li>
+          <li><%= link_to t(:home), root_path %></li>
+          <% if signed_in? %>
+            <li><%= link_to t(:signout), signout_path, method: "delete" %></li>
+          <% else %>
+            <li><%= link_to t(:signin), signin_path %></li>
+          <% end %>
         </ul>
       </nav>
     </div>

@@ -46,9 +46,6 @@ describe "User pages" do
       describe "after saving the user" do
         let(:user) { User.find_by(email: 'user@example.com') }
         before { click_button submit }
-
-        it { should have_title(user.name) }
-        it { should have_success_message(I18n.t(:welcome)) }
       end
 
       it "should create a user" do
