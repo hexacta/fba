@@ -29,9 +29,7 @@ describe "Authentication" do
     describe "with valid information" do
       let(:user) { FactoryGirl.create(:user) }
       before do
-        fill_in I18n.t(:email),    with: user.email.upcase
-        fill_in I18n.t(:password), with: user.password
-        click_button I18n.t(:signin)
+        fill_valid_signin user
       end
 
       it { should have_link(I18n.t(:signout),    href: signout_path) }
