@@ -6,6 +6,9 @@
         <ul class="nav pull-right">
           <li><%= link_to t(:home), root_path %></li>
           <% if signed_in? %>
+            <% if current_user.admin? %>
+              <li><%= link_to t(:users), users_path %></li>
+            <% end %>
             <li><%= link_to t(:signout), signout_path, method: "delete" %></li>
           <% else %>
             <li><%= link_to t(:signin), signin_path %></li>
