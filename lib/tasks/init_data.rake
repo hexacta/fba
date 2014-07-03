@@ -8,5 +8,7 @@ end
 def make_admin
   admin = User.create!(name:"admin",
                        email: "admin@example.com",
-                       password: "admin123", password_confirmation: "admin123")
+                       password: "admin123",
+                       password_confirmation: "admin123",
+                       admin: true)
 end
