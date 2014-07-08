@@ -4,3 +4,5 @@
   <%= @user.name %>
 </h1>
 <%= @user.name %>, <%= @user.email %>
+
+<%= link_to t(:change), edit_user_path(@user) %>
