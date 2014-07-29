@@ -8,6 +8,6 @@ Fba::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   match '/signin',  to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
-  match '/donante', to: 'donantes#index',     via: 'get'
+  match '/donantes', to: 'donantes#index',     via: 'get'
   match '/horarioEntregas', to: 'horario_entregas#index', via: 'get'
 end
