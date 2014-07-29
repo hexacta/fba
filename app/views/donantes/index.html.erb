@@ -1,0 +1,29 @@
+<h1>Listing donantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Donante</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @donantes.each do |donante| %>
+      <tr>
+        <td><%= donante.codigo %></td>
+        <td><%= donante.donante %></td>
+        <td><%= link_to 'Show', donante %></td>
+        <td><%= link_to 'Edit', edit_donante_path(donante) %></td>
+        <td><%= link_to 'Destroy', donante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Donante', new_donante_path %>

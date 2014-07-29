@@ -1,0 +1,25 @@
+<%= form_for(@donante) do |f| %>
+  <% if @donante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@donante.errors.count, "error") %> prohibited this donante from being saved:</h2>
+
+      <ul>
+      <% @donante.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo %><br>
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :donante %><br>
+    <%= f.text_field :donante %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Listing horario_entregas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Horario</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @horario_entregas.each do |horario_entrega| %>
+      <tr>
+        <td><%= horario_entrega.horario %></td>
+        <td><%= link_to 'Show', horario_entrega %></td>
+        <td><%= link_to 'Edit', edit_horario_entrega_path(horario_entrega) %></td>
+        <td><%= link_to 'Destroy', horario_entrega, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Horario entrega', new_horario_entrega_path %>
