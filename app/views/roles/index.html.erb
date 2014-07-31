@@ -3,7 +3,12 @@
 
 <ul class="users">
   <% @roles.each do |role|  %>
-  	<li><%= role.name %></li>
+  	<li>
+      <%= role.name %>
+      <% if current_user.admin? %>
+        | <%= link_to t(:change), edit_role_path(role) %> 
+      <% end %>
+    </li>
   <% end %>
 </ul>
 
