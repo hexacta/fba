@@ -21,3 +21,4 @@
 
 # Ignore vim backup files
 *~
+.idea/workspace.xml
