@@ -1,0 +1,14 @@
+<% provide(:title, t(:roles_title)) %>
+<h1><%= t(:roles_heading) %></h1>
+
+<ul class="users">
+  <% @roles.each do |role|  %>
+  	<li>
+      <%= role.name %>
+      <% if current_user.admin? %>
+        | <%= link_to t(:change), edit_role_path(role) %> 
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+

@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 20140801021057) do
     t.datetime "updated_at"
   end
 
+  create_table "roles", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "roles_users", id: false, force: true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -39,7 +48,6 @@ ActiveRecord::Schema.define(version: 20140801021057) do
     t.boolean  "admin",           default: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
 end
