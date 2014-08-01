@@ -1,10 +1,13 @@
-<h1>Listing donantes</h1>
+<h1><%= t(:list_donante) %></h1>
 
 <table>
   <thead>
     <tr>
       <th>Codigo</th>
       <th>Donante</th>
+      <th>Nombre contacto</th>
+      <th>Email</th>
+      <th>Telefono</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,13 +15,16 @@
   </thead>
 
   <tbody>
-    <% @donantes.each do |donante| %>
+    <% @donantes.each do |t| %>
       <tr>
-        <td><%= donante.codigo %></td>
-        <td><%= donante.donante %></td>
-        <td><%= link_to 'Show', donante %></td>
-        <td><%= link_to 'Edit', edit_donante_path(donante) %></td>
-        <td><%= link_to 'Destroy', donante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= t.codigo %></td>
+        <td><%= t.donante %></td>
+        <td><%= t.nombre_contacto %></td>
+        <td><%= t.email %></td>
+        <td><%= t.telefono %></td>
+        <td><%= link_to t(:details), t %></td>
+        <td><%= link_to t(:edit), edit_donante_path(t) %></td>
+        <td><%= link_to t(:delete), t, method: :delete, data: { confirm: t(:delete_confirmation) } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Donante', new_donante_path %>
+<%= link_to t(:new_record), new_donante_path %>

@@ -9,5 +9,5 @@ Fba::Application.routes.draw do
   match '/signin',  to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/donantes', to: 'donantes#index',     via: 'get'
-  match '/horarioEntregas', to: 'horario_entregas#index', via: 'get'
+  match '/horario_Entregas', to: 'horario_entregas#index', via: 'get'
 end
