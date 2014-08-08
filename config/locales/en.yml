@@ -49,7 +49,7 @@ en:
   roles_title: "All roles"
   roles_heading: "All roles"
   edit_user_role_title: "Edit Role"
-  edit_user_role_heading: "Update your roles"  users: "Users"
+  edit_user_role_heading: "Update your roles"
   edit_donante: "Edit Donor"
   nav_back: "Back"
   new_donante_heading: "Nuevo Donor"
